@@ -20,5 +20,12 @@
   "workbench.activityBar.visible": true,
   "workbench.colorTheme": "Visual Studio Dark",
   "workbench.fontAliasing": "antialiased",
-  "workbench.statusBar.visible": true
+  "workbench.statusBar.visible": true,
+
+  "python.testing.pytestArgs": [
+      "."
+    ],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true
+
 }
