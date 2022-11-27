@@ -1,9 +1,7 @@
-# Calculate the median of a random list of numbers
+# Calculate the median of a list of numbers
 
-from random import random
 
-size = 11
-numbers = [random() * 100 for _ in range(size)]
+numbers = [2, 1, 3]
 
 numbers.sort()
 i = len(numbers) // 2

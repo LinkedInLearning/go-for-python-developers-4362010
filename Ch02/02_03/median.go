@@ -1,18 +1,13 @@
-// Calculate the median of a random list of numbers
+// Calculate the median of a slice of numbers
 package main
 
 import (
 	"fmt"
-	"math/rand"
 	"sort"
 )
 
 func main() {
-	const size = 11
-	var nums []float64
-	for i := 0; i < size; i++ {
-		nums = append(nums, rand.Float64()*100)
-	}
+	nums := []float64{2, 1, 3}
 
 	sort.Float64s(nums)
 	var median float64
