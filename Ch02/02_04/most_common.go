@@ -1,4 +1,4 @@
-// What is the most common words in Rumi's poem?
+// What is the most common word in Rumi's poem?
 package main
 
 import (
