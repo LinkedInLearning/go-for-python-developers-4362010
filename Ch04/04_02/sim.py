@@ -3,8 +3,8 @@ from dataclasses import dataclass
 
 @dataclass
 class Location:
-    lat: int
-    lng: int
+    lat: float
+    lng: float
 
     def __post_init__(self):
         if self.lat < -90 or self.lat > 90:

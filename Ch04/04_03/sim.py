@@ -3,8 +3,8 @@ from dataclasses import dataclass
 
 @dataclass
 class Location:
-    lat: int
-    lng: int
+    lat: float
+    lng: float
 
     def __post_init__(self):
         if self.lat < -90 or self.lat > 90:
@@ -19,10 +19,10 @@ class Location:
 
 @dataclass
 class Car(Location):
-    id: int
+    id: str
 
 
 if __name__ == '__main__':
-    car = Car(id='g0ph3r', lat=32.5253837, lng=34.9427434)
+    car = Car(id='pyth0n', lat=32.5253837, lng=34.9427434)
     car.move(32.0641339, 34.8742343)
     print(car)
