@@ -12,6 +12,7 @@ RUN if [ "${NODE_VERSION}" != "none" ]; then su vscode -c "umask 0002 && . /usr/
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends python3-pip
 RUN python3 -m pip install pytest~=7.2 Flask~=2.2
+RUN ln -s /usr/bin/python3 /usr/local/bin/python
 
 # [Optional] Uncomment the next lines to use go get to install anything else you need
 USER vscode
