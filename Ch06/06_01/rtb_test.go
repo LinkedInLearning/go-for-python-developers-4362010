@@ -40,3 +40,15 @@ func TestSecondBestTable(t *testing.T) {
 		})
 	}
 }
+
+func ExampleSecondBest() {
+	values := []int{2, 1, 3}
+	p, err := SecondBest(values)
+	if err != nil {
+		fmt.Println("ERROR:", err)
+		return
+	}
+	fmt.Println(p)
+	// Output:
+	// 2
+}
