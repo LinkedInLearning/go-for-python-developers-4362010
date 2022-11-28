@@ -21,7 +21,7 @@ func NewLocation(lat, lng float64) (Location, error) {
 
 func (l *Location) Move(lat, lng float64) {
 	l.Lat = lat
-	l.Lat = lng
+	l.Lng = lng
 }
 
 type Car struct {
