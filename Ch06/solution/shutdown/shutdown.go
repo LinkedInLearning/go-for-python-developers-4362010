@@ -1,18 +1,18 @@
-package killer
+package shutdown
 
 import (
 	"fmt"
 	"os"
 
-	"github.com/353solutions/killer/log"
+	"github.com/353solutions/shutdown/log"
 )
 
 var (
-	logger = log.New("killer")
+	logger = log.New("shutdown")
 )
 
-// KillServer kill server from pid in pidFile.
-func KillServer(pidFile string) error {
+// ShutdownServer shuts down server from pid in pidFile.
+func ShutdownServer(pidFile string) error {
 	file, err := os.Open(pidFile)
 	if err != nil {
 		logger.Errorw("can't open", "file", pidFile, "error", err)
@@ -27,8 +27,8 @@ func KillServer(pidFile string) error {
 
 	}
 
-	logger.Infow("killing", "pid", pid)
-	// TODO: Actual kill
+	logger.Infow("shutdown", "pid", pid)
+	// TODO: Actual shutdown
 
 	if err := os.Remove(pidFile); err != nil {
 		logger.Warnw("can't delete", "file", pidFile, "error", err)

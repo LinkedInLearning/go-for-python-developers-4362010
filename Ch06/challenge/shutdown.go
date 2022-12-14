@@ -7,10 +7,10 @@ import (
 )
 
 var (
-	logger = log.New(log.Writer(), "[kill ]", log.LstdFlags|log.Lshortfile)
+	logger = log.New(log.Writer(), "[shutdown ]", log.LstdFlags|log.Lshortfile)
 )
 
-func killServer(pidFile string) error {
+func shutdownServer(pidFile string) error {
 	file, err := os.Open(pidFile)
 	if err != nil {
 		logger.Printf("ERROR: can't open %q", pidFile)
@@ -25,8 +25,8 @@ func killServer(pidFile string) error {
 
 	}
 
-	logger.Printf("INFO: killing %d", pid)
-	// TODO: Actual kill
+	logger.Printf("INFO: shutting down %d", pid)
+	// TODO: Actual shutdown
 
 	if err := os.Remove(pidFile); err != nil {
 		log.Printf("WARNING: can't delete %q - %s", pidFile, err)
@@ -36,5 +36,5 @@ func killServer(pidFile string) error {
 }
 
 func main() {
-	killServer("app.pid")
+	shutdownServer("app.pid")
 }

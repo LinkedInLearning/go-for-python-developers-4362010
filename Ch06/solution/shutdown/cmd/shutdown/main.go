@@ -5,12 +5,12 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/353solutions/killer"
+	"github.com/353solutions/shutdown"
 )
 
 func main() {
 	flag.Usage = func() {
-		fmt.Fprintf(os.Stderr, "usage: killer PID_FILE")
+		fmt.Fprintf(os.Stderr, "usage: shutdown PID_FILE")
 		flag.PrintDefaults()
 	}
 	flag.Parse()
@@ -20,7 +20,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	if err := killer.KillServer(flag.Arg(0)); err != nil {
+	if err := shutdown.ShutdownServer(flag.Arg(0)); err != nil {
 		os.Exit(1)
 	}
 }

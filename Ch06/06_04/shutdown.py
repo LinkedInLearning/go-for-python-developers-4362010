@@ -8,10 +8,10 @@ logging.basicConfig(
     ),
     level=logging.INFO,
 )
-logger = logging.getLogger('kill')
+logger = logging.getLogger('shutdown')
 
 
-def kill_server(pid_file):
+def shutdown_server(pid_file):
     try:
         with open(pid_file) as fp:
             pid = int(fp.read())
@@ -19,8 +19,8 @@ def kill_server(pid_file):
         logger.error('%r: cannot get pid - %s', pid_file, err)
         raise
 
-    logger.info('killing %s', pid)
-    # TODO: Actual kill
+    logger.info('shutting down %s', pid)
+    # TODO: Actual shutdown
 
     try:
         remove(pid_file)
@@ -29,4 +29,4 @@ def kill_server(pid_file):
 
 
 if __name__ == '__main__':
-    kill_server('Ch06/06_04/app.pid')
+    shutdown_server('Ch06/06_04/app.pid')

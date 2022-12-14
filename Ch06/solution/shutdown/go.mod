@@ -1,4 +1,4 @@
-module github.com/353solutions/killer
+module github.com/353solutions/shutdown
 
 go 1.19
 
