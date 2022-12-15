@@ -10,7 +10,7 @@ import (
 
 func main() {
 	flag.Usage = func() {
-		fmt.Fprintf(os.Stderr, "usage: shutdown PID_FILE")
+		fmt.Fprintf(os.Stderr, "usage: shutdown PID_FILE\n")
 		flag.PrintDefaults()
 	}
 	flag.Parse()
