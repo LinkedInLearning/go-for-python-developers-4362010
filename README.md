@@ -21,5 +21,5 @@ Miki Tebeka
 Check out my other courses on [LinkedIn Learning](https://www.linkedin.com/learning/instructors/miki-tebeka).
 
 [lil-course-url]: https://www.linkedin.com/learning/go-for-python-developers?dApp=59033956
-[lil-thumbnail-url]: https://media.licdn.com/dms/image/C560DAQGGT8oAX7ffbw/learning-public-crop_675_1200/0/1676494491692?e=2147483647&v=beta&t=1O8kGVcBZWiuQFrz5Euwn38gg5foa2KVmJ3FLK6d4Ig
+[lil-thumbnail-url]: https://media.licdn.com/dms/image/C4D0DAQGMZFAtTHBCyA/learning-public-crop_288_512/0/1679938358261?e=2147483647&v=beta&t=8oudFuDz_k2LOT-cnoF2zQOTtoj9nDnJ-bQ4CXw3Fg4
 
